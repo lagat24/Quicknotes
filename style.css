@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242424;
+  background: #f5f5f7;
+}
+
+body { margin: 0; min-height: 100vh; }
+.container { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0; }
+.page-header { margin-bottom: 28px; }
+.eyebrow { margin: 0 0 8px; color: #7952a3; font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+h2 { margin: 0 0 16px; font-size: 1.25rem; }
+.intro, .muted, .field-help, footer { color: #666; }
+.intro { margin: 8px 0 0; }
+.panel, .note-card { background: #fff; border: 1px solid #e5e5e9; border-radius: 12px; box-shadow: 0 4px 18px rgba(25,25,35,.04); }
+.panel { padding: 24px; margin-bottom: 32px; }
+form { display: grid; gap: 10px; }
+label { font-weight: 700; margin-top: 4px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid #cfcfd6; border-radius: 7px; background: #fff; color: inherit; font: inherit; }
+input:focus, textarea:focus { outline: 2px solid #9a78bd; outline-offset: 1px; }
+.field-help { margin: -5px 0 4px; font-size: .82rem; }
+button { width: fit-content; border: 0; border-radius: 7px; padding: 10px 16px; background: #68418f; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+button:hover:not(:disabled) { background: #51316f; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.secondary { background: #e9e1f0; color: #442d5c; }
+.secondary:hover:not(:disabled) { background: #dcd0e8; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.section-heading h2 { margin-bottom: 5px; }
+.muted { margin: 0; font-size: .9rem; }
+.status { min-height: 24px; margin: 18px 0; color: #4c3562; }
+.status.error { color: #a32626; }
+.notes-list { display: grid; gap: 12px; }
+.note-card { padding: 18px; }
+.note-card h3 { margin: 0 0 8px; font-size: 1.05rem; overflow-wrap: anywhere; }
+.note-card p { margin: 0 0 14px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note-meta { margin-bottom: 10px; color: #777; font-size: .78rem; }
+.delete-button { padding: 8px 12px; background: #a33a3a; font-size: .88rem; }
+.delete-button:hover:not(:disabled) { background: #812b2b; }
+.empty-state { padding: 22px; border: 1px dashed #c9c6cf; border-radius: 10px; color: #666; text-align: center; }
+footer { margin-top: 32px; font-size: .82rem; text-align: center; }
+
+@media (max-width: 560px) {
+  .container { padding: 26px 0; }
+  .panel { padding: 18px; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+}

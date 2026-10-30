@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickNotes API client demonstration">
+  <title>QuickNotes — API Client</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">PROJECT 2 · API CLIENT</p>
+      <h1>QuickNotes</h1>
+      <p class="intro">A simple notes interface connected to a practice REST API.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="create-heading">
+      <h2 id="create-heading">Create a note</h2>
+      <form id="note-form">
+        <label for="note-title">Title <span aria-hidden="true">*</span></label>
+        <input id="note-title" name="title" type="text" maxlength="100"
+               placeholder="Give your note a title" required>
+        <p class="field-help">Required · 100 characters maximum</p>
+        <label for="note-body">Note</label>
+        <textarea id="note-body" name="body" rows="4"
+                  placeholder="Write something (optional)"></textarea>
+        <button id="create-button" type="submit">Create note</button>
+      </form>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notes-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="notes-heading">Your notes</h2>
+          <p class="muted">The first ten notes are loaded from JSONPlaceholder.</p>
+        </div>
+        <button id="load-button" class="secondary" type="button">Load notes</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">
+        Select “Load notes” to fetch notes from the server.
+      </p>
+      <div id="notes-list" class="notes-list" aria-live="polite">
+        <p class="empty-state">No notes loaded yet.</p>
+      </div>
+    </section>
+    <footer>
+      <p>Practice client powered by JSONPlaceholder. Changes are not permanently stored.</p>
+    </footer>
+  </main>
+</body>
+</html>
